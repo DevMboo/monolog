@@ -107,7 +107,7 @@ Here's a breakdown of the directory structure in the **Monolog** project:
 
 To get started with **Monolog**, follow these steps:
 
-### 1. Clone the repository
+### 1. Install project CLI
 
 ```bash
 composer install monolog <name-folder>
