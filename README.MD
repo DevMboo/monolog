@@ -110,7 +110,7 @@ To get started with **Monolog**, follow these steps:
 ### 1. Install project CLI
 
 ```bash
-composer install monolog <name-folder>
+composer require devmboo/monolog
 ```
 
 ### 2. Navigate to the project directory
