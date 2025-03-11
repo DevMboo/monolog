@@ -1,0 +1,113 @@
+[2025-03-11 06:42:01] Error Code: 404 - Route not found for GET gfdhfgj
+Exception Details: Route not found for GET gfdhfgj
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'gfdhfgj')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:42:58] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'gfdhfgj')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:42:58] Error Code: 404 - Route not found for GET gfdhfgj
+Exception Details: Route not found for GET gfdhfgj
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'gfdhfgj')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:43:09] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'gfdgdhmhjk,hj')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:43:09] Error Code: 404 - Route not found for GET gfdgdhmhjk,hj
+Exception Details: Route not found for GET gfdgdhmhjk,hj
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'gfdgdhmhjk,hj')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:47:07] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'index32')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:47:07] Error Code: 404 - Route not found for GET index32
+Exception Details: Route not found for GET index32
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'index32')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:49:17] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'index32')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:49:17] Error Code: 404 - Route not found for GET index32
+Exception Details: Route not found for GET index32
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('GET', 'index32')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 06:49:21] INFO: Log test by writing is not error existing
+[2025-03-11 06:54:11] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\middlewares\Middlewares.php(46): Monolog\App\Middlewares\Web\EnsureApplicationCrsfToken->handle()
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\middlewares\Middlewares.php(24): Monolog\App\Middlewares\Middlewares->execDefault()
+#2 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\http\Router.php(187): Monolog\App\Middlewares\Middlewares->__construct()
+#3 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\http\Router.php(138): Monolog\App\Http\Router->handleMiddlewares(Array)
+#4 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(36): Monolog\App\Http\Router->dispatch('POST', 'criar')
+#5 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(8): Monolog\App\Bootstrap->handle()
+#6 {main}
+
+[2025-03-11 17:32:29] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 17:32:29] Error Code: 404 - Route not found for GET fdsghkfnfadsf
+Exception Details: Route not found for GET fdsghkfnfadsf
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 17:32:41] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 17:32:41] Error Code: 404 - Route not found for GET fdsghkfnfadsf
+Exception Details: Route not found for GET fdsghkfnfadsf
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 17:33:15] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 17:33:15] Error Code: 404 - Route not found for GET fdsghkfnfadsf
+Exception Details: Route not found for GET fdsghkfnfadsf
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 17:34:18] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 17:34:18] Error Code: 404 - Route not found for GET fdsghkfnfadsf
+Exception Details: Route not found for GET fdsghkfnfadsf
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.php(52): Monolog\App\Http\Router->dispatch('GET', 'fdsghkfnfadsf')
+#1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+

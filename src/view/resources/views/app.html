@@ -1,0 +1,46 @@
+<!--
+    Monolog PHP Framework - Banner Component
+    Version 1.0 (2025)
+
+    This is the banner component file for the Monolog framework. It contains
+    the structure for the header, including a logo and a call-to-action 
+    message to encourage users to get started quickly with their application.
+
+    @see       https://github.com/devMboo/monolog The Monolog GitHub repository
+    @author    Luan Chaves <lchavesdesousa>
+    @copyright 2025 Luan Chaves
+    @license   https://opensource.org/licenses/MIT MIT License
+    @note      This component is a part of the Monolog framework and is 
+               intended to provide a consistent user interface for the 
+               header section across the application.
+
+    Root HTML Structure for the Page 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character set for the document -->
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag for responsive design, ensuring proper scaling on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS files for styling -->
+    <link href="@assets('css/output.css')" rel="stylesheet">
+    <link href="@assets('css/global.css')" rel="stylesheet">
+    <!-- Favicon for the browser tab -->
+    <link rel="shortcut icon" href="@assets('ico/ico-blue.png')" type="image/x-icon">
+    <!-- Page title that will be displayed in the browser tab -->
+    <title>Welcome - Monolog Framework</title>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900 body-outfit">
+    <!-- Main content container that fills the screen -->
+    <div class="min-h-screen flex items-center justify-center">
+        <!-- Inner container with a white background, padding, rounded corners, and a shadow effect -->
+        <div class="p-8 rounded-lg max-w-3xl w-full">
+            <!-- Slot for injecting dynamic content -->
+            <div class="mt-4">
+                {{slot}} <!-- Dynamic content will be injected here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

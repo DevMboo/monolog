@@ -1,0 +1,198 @@
+<!-- Banner View Template with Buttons for GitHub and Documentation -->
+<div class="bg-white mb-10 py-3 px-3 pb-15 shadow-lg rounded-lg relative">
+    @component('header')
+
+    <!-- Main Heading -->
+    <h1 class="text-3xl font-semibold text-center mb-4">Welcome to <b class="text-blue-500">Monolog</b> Framework</h1>
+    <!-- Paragraph Description -->
+    <p class="text-center text-gray-600 mb-6">Congratulations on setting up your project. Let's get started!</p>
+    <!-- Container for buttons -->
+    <div class="flex flex-col items-center mt-8">
+        <div class="flex gap-4">
+            <!-- GitHub Button -->
+            <a href="https://github.com/your-repo" target="_blank"
+                class="bg-gray-800 text-white py-2 px-4 rounded-lg hover:bg-gray-700 transition duration-300">
+                GitHub Repository
+            </a>
+
+            <!-- Documentation Button -->
+            <a href="https://your-docs-link.com" target="_blank"
+                class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-500 transition duration-300">
+                Documentation
+            </a>
+        </div>
+    </div>
+
+    <!-- Paragraph version application -->
+    <p class="text-center text-gray-400 mb-6 absolute right-3 bottom-0">@version 1.0x</p>
+</div>
+
+<div class="bg-white p-8 shadow-lg rounded-lg max-w-3xl w-full">
+    <!-- Main container for the page with padding, shadow, and a max width for better layout -->
+    <h1 class="text-3xl font-semibold text-center mb-6">
+        <!-- Title of the page, large size, centered, and with a bottom margin -->
+        <b class="text-blue-500">Monolog</b> Framework: CLI Commands & Directives
+    </h1>
+
+    <!-- Section for the "Getting Started" part -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-4">🚀 Getting Started</h2>
+        <!-- Subheading for the section with an emoji -->
+        <p class="text-gray-700 mb-4">
+            <!-- Paragraph explaining how to start the application -->
+            To start the application, it's recommended to use the following commands to ensure a smooth development
+            experience.
+            The application comes pre-configured with Tailwind CSS, and these commands will ensure everything runs
+            correctly.
+        </p>
+        <ul class="list-disc ml-8 mb-6">
+            <!-- Unordered list of the commands to use for starting the application -->
+            <li><strong>NPM Run Dev:</strong> Use this command to start the development server and enable live-reloading
+                with Tailwind CSS.</li>
+            <li><strong>PHP Mono.php Server:</strong> This command starts the built-in PHP server for the Monolog
+                application. It's essential for running the application in a local environment.</li>
+        </ul>
+    </section>
+
+    <!-- Section for the "Available CLI Commands" part -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-4">🔧 Available CLI Commands</h2>
+        <!-- Subheading for the section with an emoji -->
+        <p class="text-gray-700 mb-4">
+            <!-- Paragraph explaining the purpose of this section -->
+            Here’s a list of the available CLI commands that can be executed within the Monolog framework:
+        </p>
+
+        <table class="min-w-full table-auto border-collapse border border-gray-300 mb-6">
+            <!-- Table to display the list of commands -->
+            <thead>
+                <tr class="bg-gray-200">
+                    <!-- Table headers -->
+                    <th class="border border-gray-300 px-4 py-2">Command</th>
+                    <th class="border border-gray-300 px-4 py-2">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table body containing the commands -->
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php server`</td>
+                    <td class="border border-gray-300 px-4 py-2">Starts the built-in PHP server.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php standard`</td>
+                    <td class="border border-gray-300 px-4 py-2">Disables the application.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:controller <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new controller.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:model <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new model.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:migration <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new migration file.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:middleware <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new middleware file.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:seeder <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new seeder.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:view <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new view file.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:layout <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new layout template.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:component <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new component file.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:mail <code class="text-red-400">[name]</code>`</td>
+                    <td class="border border-gray-300 px-4 py-2">Creates a new mail layout file template.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:seed`</td>
+                    <td class="border border-gray-300 px-4 py-2">Executes all seeder classes to insert initial data into
+                        the database.</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 px-4 py-2 text-blue-600">`php mono.php make:migrate`</td>
+                    <td class="border border-gray-300 px-4 py-2">Executes all pending migrations in the database.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section for the "Directory Structure After Running Commands" part -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-4">🔧 Directory Structure After Running Commands</h2>
+        <!-- Subheading for the section with an emoji -->
+        <p>After executing the CLI commands, the generated files will be stored in the following directories:</p>
+
+        <ul>
+            <!-- List to describe the directory structure -->
+            <li><strong>/src</strong>: Contains the main source files for the framework.
+                <ul>
+                    <li><strong>/app</strong>: Core application files.
+                        <ul>
+                            <li><strong>/config</strong>: Configuration files (e.g., <code class="text-blue-400">includes.php, stacking.php</code>).</li>
+                            <li><strong>/console/commands</strong>: Contains custom CLI commands.
+                                <ul>
+                                    <li>Files such as <code class="text-blue-400">MakeComponent.php</code>, <code class="text-blue-400">MakeController.php</code>,
+                                        <code class="text-blue-400">MakeModel.php</code>, <code class="text-blue-400">MakeMigration.php</code>, among others.</li>
+                                </ul>
+                            </li>
+                            <li><strong>/controller</strong>: Contains controller files.</li>
+                            <li><strong>/helpers</strong>: Helper functions for various purposes.</li>
+                            <li><strong>/http</strong>: HTTP-related files like <code class="text-blue-400">Request.php</code>,
+                                <code class="text-blue-400">Response.php</code>, <code class="text-blue-400">Router.php</code>.</li>
+                            <li><strong>/middlewares</strong>: Middleware files for API and Web.</li>
+                            <li><strong>/resources</strong>: Resource files like views and components.</li>
+                            <li><strong>/database</strong>: Database-related files, including migrations and seeders.
+                            </li>
+                            <li><strong>/model</strong>: Contains model files.</li>
+                            <li><strong>/router</strong>: Routing files (e.g., <code class="text-blue-400">web.php</code>).</li>
+                            <li><strong>/view</strong>: Contains view files.
+                                <ul>
+                                    <li><strong>/public</strong>: Public assets like CSS, images, and JS.</li>
+                                    <li><strong>/resources</strong>: Additional resource files, including views.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>/vendor</strong>: Composer dependencies.</li>
+                    <li><strong>/node_modules</strong>: Contains NPM packages, including Tailwind CSS.</li>
+                </ul>
+        </ul>
+    </section>
+
+    <!-- Section for "Monolog Directives" part -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-4">⚙️ Monolog Directives</h2>
+        <p class="text-gray-700 mb-4">
+            <!-- Paragraph explaining the custom directives in the framework -->
+            Monolog comes with several custom directives that make development faster and cleaner. Here’s an explanation
+            of some common ones:
+        </p>
+
+        <ul class="list-disc ml-8 mb-6">
+            <!-- List of directives and their explanations -->
+            <li><strong>[<b class="text-purple-800">@component</b>]</strong>: Used to include a Blade component. It
+                helps in reusing UI elements across your application.</li>
+            <li><strong>[<b class="text-purple-800">@assets</b>]</strong>: Used to reference static assets like CSS, JS,
+                and image files, automatically linking them to the public directory.</li>
+            <li><strong>[<b class="text-purple-800">@endif</b>]</strong>: Complements <b>if</b> statements for logic
+                separation in Blade files.</li>
+            <li><strong>[<b class="text-purple-800">@forelse</b>]</strong>: Similar to the regular <b>@foreach</b>
+                directive, but adds logic to handle empty arrays with a custom message.</li>
+        </ul>
+    </section>
+</div>
