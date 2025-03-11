@@ -373,4 +373,3 @@ This example demonstrates how to implement a basic CRUD system using the `Model`
 ## 💬 Questions?
 
 Feel free to open an issue or ask questions through our discussion board. Happy coding! 😊
-```
