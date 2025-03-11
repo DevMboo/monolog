@@ -20,7 +20,7 @@
     },
     "extra": {
         "installer-paths": {
-            "src/": ["devmboo/monolog"]
+            "src/": ["src"]
         }
     }
 }
