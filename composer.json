@@ -1,5 +1,6 @@
 {
-    "name": "application/monolog",
+    "name": "devmboo/monolog",
+    "description": "A simple and efficient web application framework for rapid development.",
     "require": {
         "php": ">=8.0",
         "phpmailer/phpmailer": "^6.9"
