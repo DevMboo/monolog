@@ -1,5 +1,5 @@
 {
-    "name": "conexao/project",
+    "name": "application/monolog",
     "require": {
         "php": ">=8.0",
         "phpmailer/phpmailer": "^6.9"
