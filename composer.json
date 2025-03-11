@@ -13,12 +13,6 @@
         }
     ],
     "license": "GPL-3.0-or-later",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/devmboo/monolog"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Monolog\\": "src/"}

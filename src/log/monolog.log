@@ -111,3 +111,15 @@ Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\src\app\Bootstrap.p
 #1 E:\ProjetosMini\phpmaster\monolog (beta 1.0)\index.php(24): Monolog\App\Bootstrap->handle()
 #2 {main}
 
+[2025-03-11 21:29:06] Error Code: 0 - 
+Exception Details: 
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog-git\monolog\src\app\Bootstrap.php(43): Monolog\App\Helpers\Environment\Env::load('E:\\ProjetosMini...')
+#1 E:\ProjetosMini\phpmaster\monolog-git\monolog\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
+[2025-03-11 21:29:06] Error Code: 404 - File .env not found: E:\ProjetosMini\phpmaster\monolog-git\monolog\src\app/../../.env
+Exception Details: File .env not found: E:\ProjetosMini\phpmaster\monolog-git\monolog\src\app/../../.env
+Stack Trace: #0 E:\ProjetosMini\phpmaster\monolog-git\monolog\src\app\Bootstrap.php(43): Monolog\App\Helpers\Environment\Env::load('E:\\ProjetosMini...')
+#1 E:\ProjetosMini\phpmaster\monolog-git\monolog\index.php(24): Monolog\App\Bootstrap->handle()
+#2 {main}
+
