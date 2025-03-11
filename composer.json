@@ -13,8 +13,19 @@
         }
     ],
     "license": "GPL-3.0-or-later",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "Monolog\\": "src/"}
+            "App\\": "src/",
+            "Monolog\\": "monolog/src/"
         }
+    }
 }
