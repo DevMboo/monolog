@@ -12,7 +12,7 @@
             "role": "Developer"
         }
     ],
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "repositories": [
         {
             "type": "vcs",
