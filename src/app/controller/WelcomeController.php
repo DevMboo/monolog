@@ -49,6 +49,6 @@ class WelcomeController extends Controller
     public function index()
     {
         // Render view method
-        $this->view('pages/home', ['vitor' => 'gay'])->layout('app');
+        $this->view('pages/home')->layout('app');
     }
 }
