@@ -147,7 +147,7 @@ Rename the `.env.example` file to `.env` and fill in the necessary configuration
 #### APPLICATION ####
 APP_KEY= 
 APP_LOCAL=homolog
-APP_URL=localhost
+APP_URL=http://localhost
 APP_NAME=monolog
 APP_PORT=8000
 
