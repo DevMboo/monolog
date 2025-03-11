@@ -152,6 +152,7 @@ APP_NAME=monolog
 APP_PORT=8000
 
 #### DATABASE ####
+DB_DRIVER=YOUR_DRIVER
 DB_HOST=YOUR_HOST
 DB_NAME=YOUR_DB_NAME
 DB_USER=YOUR_USER
@@ -163,6 +164,16 @@ STANDARD_MODE=false
 
 #### ENCRYPTY KEY ####
 ENCRYPT=
+
+#### MAILER SETTINGS ####
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.example.com
+MAIL_PORT=587
+MAIL_USERNAME=your_email@example.com
+MAIL_PASSWORD=your_email_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=no-reply@example.com
+MAIL_FROM_NAME="Monolog System"
 ```
 
 ### 6. Build the front-end assets
