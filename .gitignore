@@ -1,0 +1,9 @@
+/src/view/public/*.jpg
+/src/view/public/*.jpeg
+/src/view/public/*.png
+/src/view/public/*.gif
+/src/view/public/*.svg
+/vendor/
+vendor
+node_modules/
+.env
