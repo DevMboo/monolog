@@ -1,4 +1,3 @@
-```markdown
 # Monolog PHP Framework 🎤
 
 Welcome to **Monolog**, a custom PHP framework for building modern and dynamic web applications. This framework is designed to be simple, flexible, and efficient for both small and large projects.
