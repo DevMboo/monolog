@@ -110,7 +110,7 @@ To get started with **Monolog**, follow these steps:
 ### 1. Clone the repository
 
 ```bash
-git clone https://your-repository-url.com
+composer install monolog <name-folder>
 ```
 
 ### 2. Navigate to the project directory
