@@ -12,6 +12,7 @@
             "role": "Developer"
         }
     ],
+    "license": "MIT",
     "repositories": [
         {
             "type": "vcs",
