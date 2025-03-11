@@ -13,24 +13,14 @@
         }
     ],
     "license": "GPL-3.0-or-later",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "autoload": {
         "psr-4": {
             "Monolog\\": "src/"
         }
     },
-    "scripts": {
-        "post-autoload-dump": [
-            "mkdir output",
-            "xcopy /E /I src \\src"
-        ]
+    "extra": {
+        "installer-paths": {
+            "src/": ["devmboo/monolog"]
+        }
     }
 }
