@@ -82,10 +82,38 @@ abstract class Migration {
         // This runs the SQL query to create the table in the database
         return $this->executeQuery($query);
     }
-    
-    
-    
 
+    /**
+     * Method to add a foreign key to an existing table.
+     *
+     * @param string $table The table that will receive the foreign key.
+     * @param string $column The column in the table that will be the foreign key.
+     * @param string $referenceTable The table that the foreign key references.
+     * @param string $referenceColumn The column in the referenced table.
+     * @param string $onDelete Behavior on delete (e.g., CASCADE, SET NULL, RESTRICT).
+     * @param string $onUpdate Behavior on update (e.g., CASCADE, SET NULL, RESTRICT).
+     * @return bool Returns true on success, false on failure.
+     */
+    protected function addForeignKey(string $table, string $column, string $referenceTable, string $referenceColumn, string $onDelete = 'CASCADE', string $onUpdate = 'CASCADE') {
+        $query = "ALTER TABLE `{$table}` ADD CONSTRAINT `fk_{$table}_{$column}`
+                  FOREIGN KEY (`{$column}`) REFERENCES `{$referenceTable}` (`{$referenceColumn}`)
+                  ON DELETE {$onDelete} ON UPDATE {$onUpdate};";
+    
+        return $this->executeQuery($query);
+    }
+
+    /**
+     * Method to remove a foreign key from a table.
+     * 
+     * @param string $table The table from which the foreign key will be removed.
+     * @param string $column The column that has the foreign key.
+     * @return bool Returns true on success, false on failure.
+     */
+    protected function dropForeignKey(string $table, string $column) {
+        $query = "ALTER TABLE `{$table}` DROP FOREIGN KEY `fk_{$table}_{$column}`;";
+        return $this->executeQuery($query);
+    }
+    
     /**
      * Method to drop a database table.
      * 
