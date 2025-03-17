@@ -221,22 +221,49 @@ class DirectiveProcessor
     /**
      * Processes @switch and @case directives in the content.
      *
+     * This function replaces @switch statements with the corresponding @case content 
+     * based on the provided data. It also ensures that any extra quotation marks 
+     * around the values are removed to allow accurate comparisons.
+     *
      * @param string $content The content containing switch statements.
-     * @param array $data The data array for case evaluation.
-     * @return string The processed content.
+     * @param array $data The data array used for case evaluation.
+     * @return string The processed content with the correct case value.
      */
     protected function processSwitchCases(string $content, array $data): string
     {
         return preg_replace_callback('/@switch\((.*?)\)(.*?)@endswitch/s', function ($matches) use ($data) {
+            // Extract and replace the variable inside @switch
             $variable = $this->replaceVariables($matches[1], $data);
             $cases = $matches[2];
+
+            // Remove extra single or double quotes from the variable
+            $variable = trim($variable, '"\''); 
+
+            // Find all @case statements
             preg_match_all('/@case\((.*?)\)(.*?)@break/s', $cases, $caseMatches, PREG_SET_ORDER);
+            $defaultCase = null; // To store @default content if present
+
+            // Loop through each @case statement
             foreach ($caseMatches as $case) {
-                if (trim($this->replaceVariables($case[1], $data)) == trim($variable)) {
-                    return $case[2];
+                // Replace variables inside @case conditions
+                $caseValue = $this->replaceVariables($case[1], $data);
+
+                // Remove extra single or double quotes from the @case value
+                $caseValue = trim($caseValue, '"\'');
+
+                // Compare the values after trimming spaces and removing quotes
+                if (trim($caseValue) == trim($variable)) {
+                    return $case[2]; // Return the matched @case content
                 }
             }
-            return '';
+
+            // If no @case matches, check for @default content
+            if (preg_match('/@default(.*?)@endswitch/s', $cases, $defaultMatch)) {
+                $defaultCase = $defaultMatch[1]; // Store @default content
+            }
+
+            // Return the @default content if found, otherwise return an empty string
+            return $defaultCase ?? '';
         }, $content);
     }
 
