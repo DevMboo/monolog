@@ -3,6 +3,7 @@
 /src/view/public/*.png
 /src/view/public/*.gif
 /src/view/public/*.svg
+/log/*
 /vendor/
 vendor
 node_modules/
