@@ -68,6 +68,9 @@ class Request {
                 // Stop further script execution
                 exit;
             }
+
+            // Clears the error session if the request rules is correct
+            Validator::forget();
         }
 
         // Return the data if no rules are provided or validation passes

@@ -146,8 +146,6 @@ class DirectiveProcessor {
     
             $field = $matches[1];
             $errorMessage = $validator::getError($field);
-            
-            $validator::forget();
 
             return $errorMessage ?: '';
         }, $content);
