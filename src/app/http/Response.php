@@ -130,4 +130,55 @@ class Response {
             echo $data;
         }
     }
+
+    /**
+     * Sets a flash message in the session.
+     *
+     * @param string $name
+     * @param string $message
+     */
+    public function setMessage(string $name, string $message): self
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        $_SESSION['messages'][$name] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets a flash message from the session.
+     *
+     * @param string $name
+     * @return string|null
+     */
+    public function getMessage(string $name): ?string
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        
+        if (!isset($_SESSION['messages'][$name])) {
+            return null;
+        }
+
+        $message = $_SESSION['messages'][$name];
+        unset($_SESSION['messages'][$name]); // Apaga após ler
+        return $message;
+    }
+
+    /**
+     * Checks if a flash message exists.
+     *
+     * @param string $name
+     * @return bool
+     */
+    public function hasMessage(string $name): bool
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        return isset($_SESSION['messages'][$name]);
+    }
 }
