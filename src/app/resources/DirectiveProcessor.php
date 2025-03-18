@@ -172,20 +172,33 @@ class DirectiveProcessor
     protected function processLoops(string $content, array $data): string
     {
         return preg_replace_callback('/@foreach\s+(\w+)\s+as\s+(\w+)(.*?)@endforeach/s', function ($matches) use ($data) {
-            $arrayName = $matches[1];
-            $itemName = $matches[2];
-            $loopContent = $matches[3];
-            $output = '';
+            // Capture the array name and the item variable from the foreach directive
+            $arrayName = $matches[1]; // Name of the array variable
+            $itemName = $matches[2];  // Name of the item variable in the loop
+            $loopContent = $matches[3]; // Content inside the @foreach and @endforeach
+            $output = ''; // Variable to store the generated HTML
+
+            // Check if the array exists in the data and is actually an array
             if (!empty($data[$arrayName]) && is_array($data[$arrayName])) {
-                foreach ($data[$arrayName] as $item) {
-                    $tempContent = $loopContent;
+                foreach ($data[$arrayName] as $item) { // Iterate over the array items
+                    $tempContent = $loopContent; // Store the loop content temporarily
+
+                    // If `$item` is a string or number, convert it into an associative array
+                    if (!is_array($item)) {
+                        $item = ['value' => $item]; // Create an array with a 'value' key
+                    }
+
+                    // Replace variables inside the loop content
                     foreach ($item as $key => $value) {
                         $tempContent = str_replace("{{ $itemName.$key }}", $value, $tempContent);
                     }
+
+                    // Append the processed content to the final output
                     $output .= $tempContent;
                 }
             }
-            return $output;
+
+            return $output; // Return the rendered content
         }, $content);
     }
 
@@ -289,12 +302,29 @@ class DirectiveProcessor
      */
     protected function parseParams(string $paramString): array
     {
-        $params = [];
-        preg_match_all('/\s*[\'\"]?(\w+)[\'\"]?\s*:\s*[\'\"]([^\'\"]+)[\'\"]/', $paramString, $matches, PREG_SET_ORDER);
+        $params = []; // Initialize an empty array to store the parsed parameters
+        
+        // Regular expression to capture key-value pairs, including arrays
+        preg_match_all('/\s*[\'"](\w+)[\'"]\s*:\s*(\[[^\]]*\]|[\'\"][^\'\"]*[\'\"])/', $paramString, $matches, PREG_SET_ORDER);
+
+        // Iterate through the matches found by the regular expression
         foreach ($matches as $match) {
-            $params[$match[1]] = $match[2];
+            $key = $match[1]; // The key is the first captured group (parameter name)
+            $value = trim($match[2]); // The value is the second captured group, trimming extra spaces
+
+            // Check if the value is an array
+            if (preg_match('/^\[.*\]$/', $value)) {
+                // If it's an array, remove the brackets and convert the comma-separated values into a real array
+                $value = array_map(fn($v) => trim($v, " '\""), explode(',', trim($value, '[]'))); // Remove quotes and spaces from each element
+            } else {
+                // Otherwise, treat the value as a string
+                $value = trim($value, "'\""); // Remove surrounding quotes
+            }
+
+            $params[$key] = $value; // Store the key-value pair in the $params array
         }
-        return $params;
+
+        return $params; // Return the parsed parameters array
     }
 
     /**
